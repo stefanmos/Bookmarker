@@ -1,0 +1,102 @@
+// Place all the styles related to the bookmarks controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+$primary-color: #2196F3;
+$secondary-color: darken($primary-color, 10%);
+
+ #tag_cloud {
+ 	font-family: 'Roboto';
+	font-weight: 400;
+	max-width: 700px;
+	line-height: 1.9em;
+	.s {font-size: 0.8em;}
+	.m {font-size: 1.2em;}
+	.l {font-size: 1.8em;}
+}
+
+h1 {
+	font-family: 'Roboto';
+	font-weight: 300;
+	font-size: 2.5em;
+	color: white;
+	padding: 10px 0px 0px 30px;
+}
+
+h2 {
+	font-family: 'Roboto';
+	font-weight: 100;
+	font-size: 1em;
+	color: #BBDEFB;
+	padding: 0px 0px 0px 30px;
+}
+
+h3 {
+	font-family: 'Roboto';
+	font-weight: 400;
+	font-size: 1em;
+	color: #212121;
+	margin-bottom: -15px;
+}
+
+tr {
+	color: $primary-color;
+}
+
+#Nav {
+	position: fixed;
+	top: 0px;
+	width: 100%;
+	height: 50px;
+	background: $primary-color;
+	border-top: 10px Solid $secondary-color;
+	margin-bottom: -22px;
+}
+
+#Header {
+	width: 100%;
+	height: 150px;
+	padding-top: 50px;
+	background: $primary-color;
+}
+
+#Content {
+	max-width: 100%;
+	padding: 10px 30px 30px 30px;
+	margin:0px;
+}
+
+#Name {
+	font-family: 'Roboto';
+	font-weight: 400;
+	font-size: 1em;
+	line-height: 1.4;
+	color: $primary-color;
+	width: 180px;
+}
+
+#Url {
+	font-family: 'Roboto';
+	font-weight: 300;
+	font-size: 1em;
+	width: 250px;
+	color: #B6B6B6;
+}
+
+#Tag a:link  {
+	color: white;
+	font-size: 0.9em;
+	line-height: 1.9em;
+	background: #E9E9E9;
+	padding:2px;
+	border-radius: 2px;
+}
+
+#Tag a:hover {
+	color: white;
+	background: $primary-color;
+}
+
+#Tag a:visited {
+	color: white;
+}

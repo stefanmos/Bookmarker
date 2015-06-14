@@ -1,0 +1,33 @@
+<div id="Header">
+<h1>Bookmarks</h1> 
+<h2>The only way to sort your bookmarks.</h2> 
+</div>
+
+<div id="Content">
+<h3>Tags</h3><br><br>
+  <div id="tag_cloud">
+    <span id="Tag">
+    <%= link_to 'All', bookmarks_path %>
+    <% tag_cloud Bookmark.tag_counts, %w[s m l] do |tag, css_class| %>
+      <%= link_to tag.name, tag_path(tag.name, class: css_class) %>
+    <% end %>
+    </span>
+  </div> 
+
+  <h3 style="padding:10px 0px 30px 0px;">Bookmarks</h3>
+
+  <table>
+    <tbody>
+      <% @bookmarks.each do |bookmark| %>
+        <tr>
+          <td id="Name"><%= bookmark.name %></td>
+          <td id="Url"><a href=<%= url = bookmark.url %>><%= bookmark.url %></a></td>
+          <td id="Tag"><%= raw bookmark.tag_list.map { |t| link_to t, tag_path(t) }.join(' ') %></td>
+          <td ><%= link_to 'Edit', edit_bookmark_path(bookmark) %></td>
+          <td ><%= link_to 'Delete', bookmark, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        </tr> 
+      <% end %>
+    </tbody>
+  </table>
+</div>
+
